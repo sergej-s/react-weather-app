@@ -1,0 +1,67 @@
+.main, .about {
+    width: 400px;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+.city-row {
+    width: 400px;
+    list-style-type: none;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+}
+
+.city-row p {
+    margin-bottom: 0;
+    padding: 0 10px;
+}
+
+.city-row ul {
+    margin-top: 0;
+}
+
+.city-row li {
+    margin: 0;
+}
+
+.city-input {
+    margin-bottom: 0;
+}
+
+.nav li {
+    list-style-type: none;
+    float: left;
+    padding: 0 10px;
+}
+
+.delete-city {
+    text-align: right;
+    padding-right: 10px;
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .city {
+        width: 100%;
+    }
+
+    .main {
+        width: 100%
+    }
+
+    .delete {
+        text-align: left;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
