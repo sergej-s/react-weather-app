@@ -3,6 +3,7 @@
 var Dispatcher = require('../dispatcher');
 var ActionTypes  = require('../constants/actionTypes');
 
+//Automatically generate Actions according to ActionTypes
 Object.keys(ActionTypes).forEach(function (key) {
 
     var funcName = key.split('_').map(function (word, i) {

@@ -4,6 +4,7 @@ var assign = require('object-assign');
 var EventEmitter = require('events').EventEmitter;
 var CHANGE_EVENT = 'change';
 
+//General store, that should be extended to particular store.
 var storeMethods = {
     init: function() {},
     set: function(items) {
@@ -41,6 +42,7 @@ var storeMethods = {
     emitChange: function() {
         this.emit(CHANGE_EVENT);
     },
+    //Each action can be served by several functions.
     bind: function(actionType, actionFn) {
         if (this.actions[actionType]) {
             this.actions[actionType].push(actionFn);
@@ -69,6 +71,7 @@ exports.extend = function(methods) {
     store.init();
 
     require('../dispatcher').register(function(action) {
+        //Each action can be served by several functions.
         if (store.actions[action.actionType]) {
             store.actions[action.actionType].forEach(function (fn) {
                 fn.call(store, action.data);

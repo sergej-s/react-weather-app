@@ -8,7 +8,6 @@ var API = require('./api/api');
 API.fetchCities();
 geoFindMe();
 
-
 Router.run(routes, function(Handler) {
     React.render(<Handler/>, document.getElementById('app'));
 });

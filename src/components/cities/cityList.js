@@ -10,7 +10,6 @@ var CityList = React.createClass({
     },
 
     render: function() {
-
         var createCityRow = function(city) {
 
             return (<li key={city.id} className='row city-row'>
@@ -44,13 +43,10 @@ var CityList = React.createClass({
         event.preventDefault();
         CityActions.deleteCity(city);
     }
-
 });
 
 function _convertToCelsius(degK) {
-
     return Math.round(degK - 273.15);
-
 }
 
 module.exports = CityList;

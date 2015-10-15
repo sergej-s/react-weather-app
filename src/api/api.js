@@ -8,8 +8,10 @@ var APPID = 'da06cf8106afb34ae1142a4beb9ed1aa';
 var LS_PREFIX = 'cities-';
 var OPENWEATHER_URL = 'http://api.openweathermap.org/data/2.5/weather';
 
-var API = module.exports = {
+//API fetches city wheather from openweathermap.org and populates to localStorage.
+//For simplicity suppose that app will work in the new browsers where localStorage is available.
 
+var API = module.exports = {
     fetchCities: function() {
         var cities = [];
         if (localStorage.length) {
@@ -21,6 +23,7 @@ var API = module.exports = {
         }
         Actions.gotCities(cities);
     },
+
     addCity: function(cityName) {
         if (cityName === '') return;
         _get(OPENWEATHER_URL + '?q=' + cityName
@@ -29,6 +32,7 @@ var API = module.exports = {
                 _addCity(data);
             });
     },
+
     addCityByGeoCoord: function(lat, lon) {
         _get(OPENWEATHER_URL + '?lat=' + lat
             + '&lon=' + lon
@@ -37,6 +41,7 @@ var API = module.exports = {
                 _addCity(data);
             });
     },
+
     removeCity: function(city) {
        localStorage.removeItem(LS_PREFIX + city.id);
        setTimeout(Actions.deletedCity.bind(null,city), 0);
@@ -44,6 +49,7 @@ var API = module.exports = {
 };
 
 function _get(url) {
+    //Use new fetch method for AJAX calls. Doesn't work in IE, Safari.
     return fetch(url).then(function (res) {
         return res.json();
     });

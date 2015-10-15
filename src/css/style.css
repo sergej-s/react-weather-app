@@ -42,21 +42,23 @@ h1 {
 }
 
 @media (max-width: 550px) {
+    .delete-city {
+        text-align: left;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 400px) {
     h1 {
         font-size: 3rem;
     }
 
-    .city {
+    .city-row {
         width: 100%;
     }
 
     .main {
         width: 100%
-    }
-
-    .delete {
-        text-align: left;
-        padding-left: 10px;
     }
 }
 

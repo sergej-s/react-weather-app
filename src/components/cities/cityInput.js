@@ -12,8 +12,8 @@ var CityInput= React.createClass({
             value: ''
         };
     },
-    render: function () {
 
+    render: function () {
         return (
             <form className='row city-input'>
                 <div className='eight columns'>
@@ -34,11 +34,13 @@ var CityInput= React.createClass({
                 </div>
             </form>);
     },
+
     handleChange: function (event) {
         this.setState({
             value: event.target.value
         });
     },
+
     handleClick: function (event) {
         event.preventDefault();
         this.props.onClick(this.state.value);
