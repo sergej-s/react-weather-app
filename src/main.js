@@ -1,5 +1,8 @@
 'use strict';
 
+Object.fetch = Object.fetch || require('whatwg-fetch');
+Object.promise = Object.promise || require('es6-promise');
+
 var React = require('react');
 var Router = require('react-router');
 var routes = require('./routes');
