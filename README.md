@@ -5,8 +5,7 @@ https://gist.github.com/beshkenadze/3e3cfc70a9411d54ecd4
 
 * React + Flux
 * Попробовать в живую можно здесь http://sergej-s.github.io/react-weather-app
-* Работает в: Chrome v.45, FF 41, Operav32, Mobile Chrome
-* Не работает в: IE, Safari (так как не использовал полифилы для современных методов (fetch..))
+* Тестировал в основном в Chrome
 
 # Погодное одностраничное веб-приложение
 
