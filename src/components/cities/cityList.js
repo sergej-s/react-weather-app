@@ -1,7 +1,6 @@
 'use strict';
 
 var React = require('react');
-var Router = require('react-router');
 var CityActions = require('../../actions/cityActions');
 
 var CityList = React.createClass({

@@ -1,8 +1,6 @@
 'use strict';
 
 var React = require('react');
-var Router = require('react-router');
-var Link = Router.Link;
 var CityStore = require('../stores/cityStore');
 var CityActions = require('../actions/cityActions');
 var CityInput = require('./cities/cityInput');
@@ -16,8 +14,7 @@ var Home = React.createClass({
     },
 
     mixins: [
-        CityStore.mixin,
-        Router.Navigation
+        CityStore.mixin
     ],
 
     _onChange: function() {
