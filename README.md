@@ -7,7 +7,8 @@ https://gist.github.com/beshkenadze/3e3cfc70a9411d54ecd4
 * Попробовать в живую можно здесь http://sergej-s.github.io/react-weather-app
 * Тестировал в основном в Chrome
 
-# Погодное одностраничное веб-приложение
+<hr>
+## Погодное одностраничное веб-приложение
 
 (!) Данные можно взять с сайта openweathermap.org
 
